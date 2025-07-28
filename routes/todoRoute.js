@@ -6,11 +6,6 @@ const { deleteTodo } = require('../controllers/deleteTodo');
 
 const router = express.Router();
 
-// import Controller
-
-
-//define API routes
-
 router.post('/createTodo' , createHandler);
 router.get('/getTodos' , getTodo)
 router.get('/getTodoById/:id' , getTodoById)
