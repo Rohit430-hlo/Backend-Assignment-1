@@ -1,20 +1,9 @@
-// import the model
 
 const Todo = require('../models/Todo')
-
-// define the route Handler
-
 exports.createHandler = async (req , res) => {
-
     try{
-        // extract title and description from request body
         const {title , description} =  req.body;
-
-        // create a new todo Object and insert in DB
-
         const response = await Todo.create({title , description})
-
-        // send a json response with a success flag
         res.status(200).json(
             {
                 success:true,
